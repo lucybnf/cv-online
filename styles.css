@@ -19,14 +19,14 @@ header {
 section {
     margin: 20px;
     padding: 15px;
-    background-color: #ffffff;
+    background-color: #f0f0f0;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilo para los títulos */
 h1, h2 {
-    color: white; /* Color de los títulos (azul oscuro) */
+    color: #ffffff; /* Color de los títulos (azul oscuro) */
 }
 
 /* Estilo para los párrafos */
