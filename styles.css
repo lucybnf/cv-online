@@ -1,50 +1,55 @@
-/* Estilo para el cuerpo de la página */
+/* Estilos generales */
 body {
-    background-color: #333; /* Fondo gris claro */
-    font-family: Arial, sans-serif; /* Fuente Arial */
-    margin: 0;
-    padding: 0;
-
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
-/* Estilo para el encabezado */
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
+/* Menú */
+.menu {
+  background-color: #0077b6; /* Azul brillante */
+  color: white;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-/* Estilo para las secciones del CV */
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul li {
+  margin: 0 15px;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+  color: #f4a261; /* Naranja pastel */
+}
+
+/* Secciones */
 section {
-    margin: 20px;
-    padding: 15px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 80px 20px; /* Espacio para evitar que el menú las tape */
+  margin-top: 50px;
 }
 
-/* Estilo para los títulos */
-h1, h2 {
-    color: #ffffff; /* Color de los títulos (azul oscuro) */
+section h1 {
+  color: #0077b6; /* Azul brillante */
 }
 
-/* Estilo para los párrafos */
-p, ul {
-    color: #34495e; /* Color del texto (gris oscuro) */
-    font-size: 16px;
-}
-
-/* Estilo para los enlaces */
-a {
-    color: #3498db; /* Color azul para los enlaces */
-    text-decoration: none; /* Sin subrayado */
-}
-
-/* Estilo para el pie de página */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+section p {
+  color: #333; /* Gris oscuro */
 }
