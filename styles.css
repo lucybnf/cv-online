@@ -1,77 +1,127 @@
-/* Estilo para el cuerpo de la página */
-body {
-    background-color: #f4f4f9; /* Fondo más claro y amigable */
-    font-family: Arial, sans-serif; /* Fuente Arial */
-    margin: 0;
-    padding: 0;
-    color: #333; /* Texto predeterminado más oscuro */
-}
+ body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #0077B6;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        header img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav {
+            background: #023E8A;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+        nav ul li a:hover {
+            background: #0077B6;
+            border-radius: 5px;
+        }
+        section {
+            padding: 20px;
+        }
+        .timeline {
+            position: relative;
+            margin: 20px 0;
+            padding-left: 40px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20px;
+            height: 100%;
+            width: 4px;
+            background: #0077B6;
+        }
+        .timeline-item {
+            margin: 10px 0;
+        }
+        .timeline-item h3 {
+            margin: 0;
+            color: #0077B6;
+        }
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        .skill {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .progress-bar {
+            background: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .progress-bar span {
+            display: block;
+            height: 10px;
+            background: #0077B6;
+            transition: width 1s ease-in-out;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #023E8A;
+            color: white;
+            margin-top: 20px;
+        }
 
-/* Estilo para el encabezado */
-header {
-    background-color: #0077B6; /* Azul intenso para destacar */
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Estilo para las secciones del CV */
-section {
-    margin: 20px;
-    padding: 15px;
-    background-color: #ffffff; /* Blanco para contraste limpio */
-    border-radius: 8px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
-}
-
-/* Secciones alternadas */
-section:nth-child(even) {
-    background-color: #f9f9f9; /* Fondo gris claro alternado */
-}
-
-/* Estilo para los títulos */
-h1, h2 {
-    color: #0077B6; /* Azul intenso para títulos principales */
-    font-weight: bold;
-}
-
-/* Estilo para los párrafos */
-p, ul {
-    color: #4f4f4f; /* Color del texto más equilibrado */
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* Estilo para los enlaces */
-a {
-    color: #3498db; /* Azul brillante */
-    text-decoration: none; /* Sin subrayado */
-    font-weight: bold;
-}
-a:hover {
-    color: #FFD700; /* Amarillo suave al pasar el mouse */
-    text-decoration: underline; /* Resaltar en hover */
-}
-
-/* Estilo para las barras de progreso */
-.progress-bar {
-    background: #e0e0e0; /* Fondo gris claro */
-    border-radius: 5px;
-    overflow: hidden;
-    margin-top: 5px;
-}
-.progress-bar span {
-    display: block;
-    height: 10px;
-    background: linear-gradient(to right, #48CAE4, #0077B6); /* Degradado azul claro a oscuro */
-    transition: width 1s ease-in-out;
-}
-
-/* Estilo para el pie de página */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #023E8A; /* Azul oscuro para pie de página */
-    color: white;
-    font-size: 14px;
-}
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin-bottom: 10px;
+            }
+            .skills {
+                grid-template-columns: 1fr;
+            }
+            .timeline {
+                padding-left: 20px;
+            }
+        }
