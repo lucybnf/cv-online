@@ -107,7 +107,6 @@ nav {
     top: 0;
     left: 0;
     width: 100%; /* Abarca todo el ancho de la página */
-    z-index: 1000; /* Asegura que la barra esté encima de otros elementos */
     transition: top 0.3s ease; /* Transición suave */
 }
 
