@@ -40,6 +40,63 @@ header p {
     font-size: 1rem;
     text-align: center;
 }
+/* Tema claro */
+body.light-theme {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header.light-theme {
+    background-color: #0077B6;
+    color: white;
+}
+
+nav.light-theme {
+    background-color: #0077B6;
+}
+
+section.light-theme {
+    background-color: #ffffff;
+}
+
+/* Tema oscuro */
+body.dark-theme {
+    background-color: #333;
+    color: #f4f4f9;
+}
+
+header.dark-theme {
+    background-color: #023E8A;
+    color: white;
+}
+
+nav.dark-theme {
+    background-color: #023E8A;
+}
+
+section.dark-theme {
+    background-color: #1a1a1a;
+    color: #f4f4f9;
+}
+
+/* Botón de cambio de tema */
+.theme-toggle {
+    background-color: #0077B6;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.theme-toggle:hover {
+    background-color: #FFD700;
+}
+
 /* Estilo para la barra de navegación */
 nav {
      background-color: #0077B6; /* Azul brillante */
