@@ -40,9 +40,6 @@ header p {
     font-size: 1rem;
     text-align: center;
 }
-
-/* Navigation */
-
 /* Estilo para la barra de navegación */
 nav {
     background-color: #0077B6; /* Azul brillante, para que combine con los títulos */
@@ -75,6 +72,7 @@ nav ul li a:hover {
     color: #FFD700; /* Amarillo suave cuando se pasa el mouse */
     text-decoration: underline;
 }
+
 /* Sections */
 section {
     padding: 50px 20px;
