@@ -1,54 +1,202 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luciana Bonfanti - CV</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #0077B6;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        header img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav {
+            background: #023E8A;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+        nav ul li a:hover {
+            background: #0077B6;
+            border-radius: 5px;
+        }
+        section {
+            padding: 20px;
+        }
+        .timeline {
+            position: relative;
+            margin: 20px 0;
+            padding-left: 40px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20px;
+            height: 100%;
+            width: 4px;
+            background: #0077B6;
+        }
+        .timeline-item {
+            margin: 10px 0;
+        }
+        .timeline-item h3 {
+            margin: 0;
+            color: #0077B6;
+        }
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        .skill {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .progress-bar {
+            background: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .progress-bar span {
+            display: block;
+            height: 10px;
+            background: #0077B6;
+            transition: width 1s ease-in-out;
+        }
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .portfolio-item {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .portfolio-item img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .portfolio-item h3 {
+            margin: 10px 0;
+            color: #0077B6;
+        }
+        .portfolio-item p {
+            font-size: 0.9em;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #023E8A;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin-bottom: 10px;
+            }
+            .skills, .portfolio {
+                grid-template-columns: 1fr;
+            }
+            .timeline {
+                padding-left: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <img src="tu-foto.jpg" alt="Luciana Bonfanti" class="profile-img">
-        <nav>
-            <ul>
-                <li><a href="#acerca-de-mi">Acerca de mí</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+        <img src="https://via.placeholder.com/100" alt="Profile Picture">
+        <div>
+            <h1>Luciana Antonella Bonfanti</h1>
+            <p>29 años</p>
+            <p>Ingeniería en Sistemas de Información | Asistente Técnico | Soporte Operativo</p>
+        </div>
     </header>
-
-    <section id="acerca-de-mi">
-        <h2>Acerca de mí</h2>
-        <p>Soy una profesional en sistemas con experiencia en soporte técnico...</p>
-    </section>
-
-    <section id="experiencia">
-        <h2>Experiencia</h2>
+    <nav>
         <ul>
-            <li><strong>Asistente Técnico</strong> en Ministerio de Economía de la Provincia de Santa Fe...</li>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#experience">Experiencia</a></li>
+            <li><a href="#education">Educación</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contacto</a></li>
         </ul>
+    </nav>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio">
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300" alt="Proyecto 1">
+                <h3>Proyecto 1</h3>
+                <p>Descripción breve del proyecto.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300" alt="Proyecto 2">
+                <h3>Proyecto 2</h3>
+                <p>Descripción breve del proyecto.</p>
+            </div>
+        </div>
     </section>
-
-    <section id="habilidades">
-        <h2>Habilidades</h2>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Linux, Git, Ethernet</li>
-            <li>Soporte y gestión de sistemas operativos</li>
-        </ul>
-    </section>
-
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Teléfono: +54 3425034092 | Correo: lucibnf@gmail.com</p>
-    </section>
-
     <footer>
-        <p>Juan de Garay 2653, Santa Fe, Argentina</p>
+        <p>&copy; 2025 Luciana Bonfanti. Todos los derechos reservados.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
