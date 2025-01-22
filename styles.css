@@ -42,14 +42,16 @@ header p {
 }
 
 /* Navigation */
+
+/* Estilo para la barra de navegación */
 nav {
-    background-color: #333;
-    color: white;
-    padding: 15px 0;
+    background-color: #0077B6; /* Azul brillante, para que combine con los títulos */
+    padding: 10px;
     text-align: center;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
+/* Estilo para los enlaces en la barra de navegación */
 nav ul {
     list-style: none;
     padding: 0;
@@ -58,24 +60,21 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin-right: 20px;
 }
 
 nav ul li a {
+    color: white; /* Enlaces en blanco */
     text-decoration: none;
-    color: white;
-    font-weight: 600;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 10px;
 }
 
 nav ul li a:hover {
-    background-color: #3498db;
-    color: white;
+    color: #FFD700; /* Amarillo suave cuando se pasa el mouse */
+    text-decoration: underline;
 }
-
 /* Sections */
 section {
     padding: 50px 20px;
