@@ -42,10 +42,16 @@ header p {
 }
 /* Estilo para la barra de navegación */
 nav {
-    background-color: #0077B6; /* Azul brillante, para que combine con los títulos */
+     background-color: #0077B6; /* Azul brillante */
     padding: 10px;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Abarca todo el ancho de la página */
+    z-index: 1000; /* Asegura que la barra esté encima de otros elementos */
+    transition: top 0.3s ease; /* Transición suave */
 }
 
 /* Estilo para los enlaces en la barra de navegación */
