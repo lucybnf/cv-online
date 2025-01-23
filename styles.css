@@ -42,9 +42,10 @@ header p {
 
 /* Navigation */
 nav {
-    background-color: #333;
+    background: #023E8A;
     color: white;
     padding: 15px 0;
+    position: sticky;
     text-align: center;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
