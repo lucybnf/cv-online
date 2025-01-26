@@ -3,7 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f7f9fc;
+    background-color: #fafafa; /* Fondo más neutro */
     color: #333;
 }
 
@@ -12,7 +12,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #2a3d66;
+    background-color: #3a5a8d; /* Azul más suave */
     color: white;
     padding: 30px 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -23,8 +23,8 @@ header img {
     border-radius: 50%;
     margin-right: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100px; /* Ajusta el tamaño de la imagen */
-    height: 100px; /* Ajusta el tamaño de la imagen */
+    width: 100px;
+    height: 100px;
 }
 
 header h1 {
@@ -41,9 +41,8 @@ header p {
 }
 
 /* Navigation */
-/* Navigation */
 nav {
-    background: #023E8A;
+    background: #2980b9; /* Azul más oscuro */
     color: white;
     padding: 15px 0;
     position: sticky;
@@ -75,10 +74,9 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #3498db;
+    background-color: #1d6c8c; /* Azul más oscuro al pasar el ratón */
     color: white;
 }
-
 
 /* Sections */
 section {
@@ -146,24 +144,25 @@ article p {
 }
 
 .progress-bar {
-    background: #e0e0e0; /* Fondo gris claro para la barra */
+    background: #e0e0e0;
     border-radius: 5px;
     overflow: hidden;
-    width: 100%; /* Asegúrate de que la barra ocupe todo el ancho disponible */
-    height: 20px; /* Ajusta la altura según lo necesites */
+    width: 100%;
+    height: 20px;
     margin-top: 5px;
 }
 
 .progress-bar span {
     display: block;
-    height: 100%; /* La altura de la barra permanece igual */
-    background: linear-gradient(to right, #48CAE4, #0077B6); /* El degradé que quieres */
+    height: 100%;
+    background: linear-gradient(to right, #4fa3d1, #006080); /* Colores más suaves */
     transition: width 1s ease-in-out;
-    width: 0%; /* Esto se ajusta dinámicamente a través de la propiedad "style" */
+    width: 0%;
 }
+
 /* Sección de Educación con fondo */
 #education {
-    background-color: #f4f6f9; /* Fondo más suave */
+    background-color: #f8f5f1; /* Fondo más cálido */
     padding: 40px 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -179,7 +178,7 @@ article p {
 
 /* Footer */
 footer {
-    background-color: #2a3d66;
+    background-color: #3c4a6d; /* Gris oscuro */
     color: white;
     text-align: center;
     padding: 20px;
@@ -200,8 +199,8 @@ footer {
 
     header img {
         margin-bottom: 15px;
-        width: 80px; /* Tamaño reducido de la imagen en móvil */
-        height: 80px; /* Tamaño reducido de la imagen en móvil */
+        width: 80px;
+        height: 80px;
     }
 
     header h1 {
@@ -227,12 +226,12 @@ footer {
         margin: 10px 0;
     }
 
-    /* Ajustes para las secciones */
     #about, #experience, #education {
-        background-color: #ffffff; /* Fondo claro */
+        background-color: #ffffff;
     }
 
     #about p, #experience p, #education p {
-        color: #333; /* Texto más oscuro */
+        color: #333;
     }
 }
+
