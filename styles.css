@@ -1,13 +1,21 @@
-# Crear el archivo CSS con los cambios, incluyendo el fondo minimalista
-css_content = """
+/* Paleta de Colores */
+:root {
+    --azul-principal: #1E3A8A; /* Azul fuerte */
+    --azul-secundario: #3B82F6; /* Azul más claro */
+    --celeste-claro: #93C5FD; /* Celeste suave */
+    --coral: #FF6F61; /* Coral vibrante */
+    --coral-claro: #FF9A8B; /* Coral suave */
+    --gris-oscuro: #2D3748; /* Gris oscuro */
+    --gris-claro: #E2E8F0; /* Gris claro */
+}
+
+/* General */
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: url('background.png') no-repeat center center fixed;
-    background-size: cover; /* Ajusta el tamaño del fondo */
-    color: #333;
+    background-color: var(--gris-claro);
+    color: var(--gris-oscuro);
 }
 
 /* Header */
@@ -15,9 +23,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #02457A;
+    background-color: var(--azul-principal);
     color: white;
-    padding: 30px 20px;
+    padding: 20px 30px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
 }
@@ -34,18 +42,16 @@ header h1 {
     margin: 0;
     font-size: 2rem;
     font-weight: 700;
-    text-align: center;
 }
 
 header p {
     margin: 5px 0;
     font-size: 1rem;
-    text-align: center;
 }
 
 /* Navigation */
 nav {
-    background: #02A9EA;
+    background-color: var(--azul-secundario);
     color: white;
     padding: 15px 0;
     position: sticky;
@@ -72,13 +78,12 @@ nav ul li a {
     font-weight: 600;
     text-transform: uppercase;
     padding: 10px 20px;
-    transition: background-color 0.3s ease;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #016494;
-    color: white;
+    background-color: var(--coral);
 }
 
 /* Sections */
@@ -86,23 +91,17 @@ section {
     padding: 50px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para resaltar contenido */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
     font-size: 2rem;
-    color: #02457A;
+    color: var(--azul-principal);
     margin-bottom: 20px;
     font-weight: 600;
     text-transform: uppercase;
-}
-
-article p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.8;
 }
 
 /* Timeline */
@@ -114,23 +113,14 @@ article p {
     background-color: #fff;
     padding: 20px;
     margin: 15px 0;
-    border-left: 5px solid #02A9EA;
+    border-left: 5px solid var(--azul-secundario);
     border-radius: 10px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-item h3 {
-    color: #333;
+    color: var(--gris-oscuro);
     font-weight: 600;
-}
-
-.timeline-item ul {
-    padding-left: 20px;
-}
-
-.timeline-item li {
-    font-size: 1rem;
-    margin-bottom: 10px;
 }
 
 /* Skills */
@@ -150,7 +140,7 @@ article p {
 }
 
 .progress-bar {
-    background: #e0e0e0;
+    background: var(--gris-claro);
     border-radius: 5px;
     overflow: hidden;
     width: 100%;
@@ -161,14 +151,14 @@ article p {
 .progress-bar span {
     display: block;
     height: 100%;
-    background: linear-gradient(to right, #48CAE4, #0077B6);
+    background: var(--azul-secundario);
     transition: width 1s ease-in-out;
     width: 0%;
 }
 
 /* Footer */
 footer {
-    background-color: #02457A;
+    background-color: var(--azul-principal);
     color: white;
     text-align: center;
     padding: 20px;
@@ -193,10 +183,6 @@ footer {
         height: 80px;
     }
 
-    header h1 {
-        font-size: 1.8rem;
-    }
-
     section h2 {
         font-size: 1.5rem;
     }
@@ -216,11 +202,3 @@ footer {
         margin: 10px 0;
     }
 }
-"""
-
-# Guardar el archivo CSS
-file_path = "/mnt/data/styles.css"
-with open(file_path, "w") as file:
-    file.write(css_content)
-
-file_path
