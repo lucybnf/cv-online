@@ -1,9 +1,12 @@
+# Crear el archivo CSS con los cambios, incluyendo el fondo minimalista
+css_content = """
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #fafafa; /* Fondo más neutro */
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover; /* Ajusta el tamaño del fondo */
     color: #333;
 }
 
@@ -12,7 +15,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #3a5a8d; /* Azul más suave */
+    background-color: #02457A;
     color: white;
     padding: 30px 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -42,7 +45,7 @@ header p {
 
 /* Navigation */
 nav {
-    background: #2980b9; /* Azul más oscuro */
+    background: #02A9EA;
     color: white;
     padding: 15px 0;
     position: sticky;
@@ -74,7 +77,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #1d6c8c; /* Azul más oscuro al pasar el ratón */
+    background-color: #016494;
     color: white;
 }
 
@@ -83,11 +86,14 @@ section {
     padding: 50px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para resaltar contenido */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
     font-size: 2rem;
-    color: #2a3d66;
+    color: #02457A;
     margin-bottom: 20px;
     font-weight: 600;
     text-transform: uppercase;
@@ -108,7 +114,7 @@ article p {
     background-color: #fff;
     padding: 20px;
     margin: 15px 0;
-    border-left: 5px solid #3498db;
+    border-left: 5px solid #02A9EA;
     border-radius: 10px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -155,30 +161,14 @@ article p {
 .progress-bar span {
     display: block;
     height: 100%;
-    background: linear-gradient(to right, #4fa3d1, #006080); /* Colores más suaves */
+    background: linear-gradient(to right, #48CAE4, #0077B6);
     transition: width 1s ease-in-out;
     width: 0%;
 }
 
-/* Sección de Educación con fondo */
-#education {
-    background-color: #f8f5f1; /* Fondo más cálido */
-    padding: 40px 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#education ul li {
-    background-color: #fff;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-}
-
 /* Footer */
 footer {
-    background-color: #3c4a6d; /* Gris oscuro */
+    background-color: #02457A;
     color: white;
     text-align: center;
     padding: 20px;
@@ -225,13 +215,12 @@ footer {
         display: block;
         margin: 10px 0;
     }
-
-    #about, #experience, #education {
-        background-color: #ffffff;
-    }
-
-    #about p, #experience p, #education p {
-        color: #333;
-    }
 }
+"""
 
+# Guardar el archivo CSS
+file_path = "/mnt/data/styles.css"
+with open(file_path, "w") as file:
+    file.write(css_content)
+
+file_path
