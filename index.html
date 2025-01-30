@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,7 @@
      <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button id="modoOscuro" class="boton-modo">🌙</button>
     <header>
         <img src="https://via.placeholder.com/100" alt="Profile Picture">
         <div>
@@ -144,5 +145,30 @@
         <p>&copy; 2025 Luciana Bonfanti.</p>
       <p>  Todos los derechos reservados.</p>
     </footer>
+    <script>
+        document.getElementById("modoOscuro").addEventListener("click", function() {
+            document.body.classList.toggle("oscuro");
+            if (document.body.classList.contains("oscuro")) {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+                this.textContent = "☀️";
+            } else {
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+                this.textContent = "🌙";
+            }
+        });
+    </script>
+    <style>
+        .boton-modo {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
 </body>
 </html>
