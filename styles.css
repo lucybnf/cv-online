@@ -1,56 +1,42 @@
 body {
-    font-family: 'Roboto', montserrat;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f7f9fc;
-    color: #333;
+    background-color: #ffffff;
+    color: #000000;
 }
 
-/* Header */    
+/* Header */
 header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #2a3d66;
+    background-color: #000000;
     color: white;
     padding: 30px 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
 }
 
 header img {
     border-radius: 50%;
     margin-right: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100px; /* Ajusta el tamaño de la imagen */
-    height: 100px; /* Ajusta el tamaño de la imagen */
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2rem;
-    font-weight: 700;
+header h1, header p {
     text-align: center;
-}
-
-header p {
     margin: 5px 0;
-    font-size: 1rem;
-    text-align: center;
 }
 
-/* Navigation */
 /* Navigation */
 nav {
-    background: #023E8A;
+    background: #000000;
     color: white;
     padding: 15px 0;
-    position: sticky;
-    top: 0;
     text-align: center;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
 }
 
 nav ul {
@@ -67,66 +53,43 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-weight: 600;
+    font-weight: bold;
     text-transform: uppercase;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
 }
 
 nav ul li a:hover {
-    background-color: #3498db;
-    color: white;
+    text-decoration: underline;
 }
-
 
 /* Sections */
 section {
     padding: 50px 20px;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
+    border-bottom: 1px solid #000000;
 }
 
-section h2 {
-    font-size: 2rem;
-    color: #2a3d66;
-    margin-bottom: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-article p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.8;
+h2 {
+    font-size: 1.8rem;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 5px;
 }
 
 /* Timeline */
-.timeline {
-    margin-top: 20px;
-}
-
 .timeline-item {
-    background-color: #fff;
     padding: 20px;
     margin: 15px 0;
-    border-left: 5px solid #3498db;
-    border-radius: 10px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 3px solid #000000;
 }
 
 .timeline-item h3 {
-    color: #333;
-    font-weight: 600;
+    color: #000000;
+    font-weight: bold;
 }
 
-.timeline-item ul {
-    padding-left: 20px;
-}
-
-.timeline-item li {
-    font-size: 1rem;
-    margin-bottom: 10px;
+.timeline-item p {
+    margin: 5px 0;
 }
 
 /* Skills */
@@ -138,123 +101,25 @@ article p {
 
 .skill {
     width: 48%;
-    margin-bottom: 30px;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
 }
 
 .progress-bar {
-    background: #e0e0e0; /* Fondo gris claro para la barra */
-    border-radius: 5px;
-    overflow: hidden;
-    width: 100%; /* Asegúrate de que la barra ocupe todo el ancho disponible */
-    height: 20px; /* Ajusta la altura según lo necesites */
-    margin-top: 5px;
+    background: #000000;
+    height: 8px;
+    width: 100%;
 }
 
 .progress-bar span {
     display: block;
-    height: 100%; /* La altura de la barra permanece igual */
-    background: linear-gradient(to right, #48CAE4, #0077B6); /* El degradé que quieres */
-    transition: width 1s ease-in-out;
-    width: 0%; /* Esto se ajusta dinámicamente a través de la propiedad "style" */
-}
-/* Sección de Educación con fondo */
-#education {
-    background-color: #f4f6f9; /* Fondo más suave */
-    padding: 40px 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#education ul li {
-    background-color: #fff;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    background: #555555;
 }
 
 /* Footer */
 footer {
-    background-color: #2a3d66;
+    background-color: #000000;
     color: white;
     text-align: center;
     padding: 20px;
-    font-size: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 50px;
-    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilos Móviles */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    header img {
-        margin-bottom: 15px;
-        width: 80px; /* Tamaño reducido de la imagen en móvil */
-        height: 80px; /* Tamaño reducido de la imagen en móvil */
-    }
-
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    section h2 {
-        font-size: 1.5rem;
-    }
-
-    .skills {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skill {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    /* Ajustes para las secciones */
-    #about, #experience, #education {
-        background-color: #ffffff; /* Fondo claro */
-    }
-    button {
-    background: linear-gradient(to right, #48CAE4, #0077B6); /* Degradé atractivo */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-button:active {
-    transform: scale(0.98);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-    #about p, #experience p, #education p {
-        color: #333; /* Texto más oscuro */
-    }
 }
